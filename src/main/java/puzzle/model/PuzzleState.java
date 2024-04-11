@@ -2,6 +2,7 @@ package puzzle.model;
 
 import java.util.Arrays;
 import java.util.EnumSet;
+import java.util.Set;
 import java.util.StringJoiner;
 
 /**
@@ -198,7 +199,7 @@ public class PuzzleState implements Cloneable {
     /**
      * {@return the set of directions to which the block can be moved}
      */
-    public EnumSet<Direction> getLegalMoves() {
+    public Set<Direction> getLegalMoves() {
         var legalMoves = EnumSet.noneOf(Direction.class);
         for (var direction : Direction.values()) {
             if (canMove(direction)) {

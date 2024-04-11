@@ -3,13 +3,13 @@ package puzzle.solver;
 import puzzle.model.Direction;
 import puzzle.model.PuzzleState;
 
-import java.util.EnumSet;
 import java.util.Optional;
+import java.util.Set;
 
 public class Node {
 
     private PuzzleState state;
-    private EnumSet<Direction> operators;
+    private Set<Direction> operators;
     private Optional<Node> parent;
     private Optional<Direction> direction;
 
