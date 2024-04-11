@@ -35,7 +35,7 @@ public class PuzzleState implements Cloneable {
      */
     public static final int BLACK_SHOE = 3;
 
-    private Position[] positions = new Position[4];
+    private Position[] positions;
 
     /**
      * Creates a {@code PuzzleState} object that corresponds to the original
@@ -58,9 +58,7 @@ public class PuzzleState implements Cloneable {
      */
     public PuzzleState(Position... positions) {
         checkPositions(positions);
-        for (var i = 0; i < positions.length; i++) {
-            this.positions[i] = positions[i];
-        }
+        this.positions = positions.clone();
     }
 
     private void checkPositions(Position[] positions) {
