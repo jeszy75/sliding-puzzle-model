@@ -6,6 +6,8 @@ import java.util.EnumSet;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import static puzzle.model.PuzzleState.*;
+
 class PuzzleStateTest {
 
     PuzzleState state1 = new PuzzleState(); // the original initial state
@@ -96,60 +98,60 @@ class PuzzleStateTest {
     void move_right_state1() {
         var stateBeforeMove = state1.clone();
         state1.move(Direction.RIGHT);
-        assertEquals(stateBeforeMove.getPosition(0).moveRight(), state1.getPosition(0));
-        assertEquals(stateBeforeMove.getPosition(1), state1.getPosition(1));
-        assertEquals(stateBeforeMove.getPosition(2), state1.getPosition(2));
-        assertEquals(stateBeforeMove.getPosition(3), state1.getPosition(3));
+        assertEquals(stateBeforeMove.getPosition(BLOCK).moveRight(), state1.getPosition(BLOCK));
+        assertEquals(stateBeforeMove.getPosition(RED_SHOE), state1.getPosition(RED_SHOE));
+        assertEquals(stateBeforeMove.getPosition(BLUE_SHOE), state1.getPosition(BLUE_SHOE));
+        assertEquals(stateBeforeMove.getPosition(BLACK_SHOE), state1.getPosition(BLACK_SHOE));
     }
 
     @Test
     void move_down_state1() {
         var stateBeforeMove = state1.clone();
         state1.move(Direction.DOWN);
-        assertEquals(stateBeforeMove.getPosition(0).moveDown(), state1.getPosition(0));
-        assertEquals(stateBeforeMove.getPosition(1), state1.getPosition(1));
-        assertEquals(stateBeforeMove.getPosition(2), state1.getPosition(2));
-        assertEquals(stateBeforeMove.getPosition(3), state1.getPosition(3));
+        assertEquals(stateBeforeMove.getPosition(BLOCK).moveDown(), state1.getPosition(BLOCK));
+        assertEquals(stateBeforeMove.getPosition(RED_SHOE), state1.getPosition(RED_SHOE));
+        assertEquals(stateBeforeMove.getPosition(BLUE_SHOE), state1.getPosition(BLUE_SHOE));
+        assertEquals(stateBeforeMove.getPosition(BLACK_SHOE), state1.getPosition(BLACK_SHOE));
     }
 
     @Test
     void move_up_state3() {
         var stateBeforeMove = state3.clone();
         state3.move(Direction.UP);
-        assertEquals(stateBeforeMove.getPosition(0).moveUp(), state3.getPosition(0));
-        assertEquals(stateBeforeMove.getPosition(1), state3.getPosition(1));
-        assertEquals(stateBeforeMove.getPosition(2), state3.getPosition(2));
-        assertEquals(stateBeforeMove.getPosition(3), state3.getPosition(3));
+        assertEquals(stateBeforeMove.getPosition(BLOCK).moveUp(), state3.getPosition(BLOCK));
+        assertEquals(stateBeforeMove.getPosition(RED_SHOE), state3.getPosition(RED_SHOE));
+        assertEquals(stateBeforeMove.getPosition(BLUE_SHOE), state3.getPosition(BLUE_SHOE));
+        assertEquals(stateBeforeMove.getPosition(BLACK_SHOE), state3.getPosition(BLACK_SHOE));
     }
 
     @Test
     void move_right_state3() {
         var stateBeforeMove = state3.clone();
         state3.move(Direction.RIGHT);
-        assertEquals(stateBeforeMove.getPosition(0).moveRight(), state3.getPosition(0));
-        assertEquals(stateBeforeMove.getPosition(1), state3.getPosition(1));
-        assertEquals(stateBeforeMove.getPosition(2).moveRight(), state3.getPosition(2));
-        assertEquals(stateBeforeMove.getPosition(3), state3.getPosition(3));
+        assertEquals(stateBeforeMove.getPosition(BLOCK).moveRight(), state3.getPosition(BLOCK));
+        assertEquals(stateBeforeMove.getPosition(RED_SHOE), state3.getPosition(RED_SHOE));
+        assertEquals(stateBeforeMove.getPosition(BLUE_SHOE).moveRight(), state3.getPosition(BLUE_SHOE));
+        assertEquals(stateBeforeMove.getPosition(BLACK_SHOE), state3.getPosition(BLACK_SHOE));
     }
 
     @Test
     void move_down_state3() {
         var stateBeforeMove = state3.clone();
         state3.move(Direction.DOWN);
-        assertEquals(stateBeforeMove.getPosition(0).moveDown(), state3.getPosition(0));
-        assertEquals(stateBeforeMove.getPosition(1), state3.getPosition(1));
-        assertEquals(stateBeforeMove.getPosition(2).moveDown(), state3.getPosition(2));
-        assertEquals(stateBeforeMove.getPosition(3), state3.getPosition(3));
+        assertEquals(stateBeforeMove.getPosition(BLOCK).moveDown(), state3.getPosition(BLOCK));
+        assertEquals(stateBeforeMove.getPosition(RED_SHOE), state3.getPosition(RED_SHOE));
+        assertEquals(stateBeforeMove.getPosition(BLUE_SHOE).moveDown(), state3.getPosition(BLUE_SHOE));
+        assertEquals(stateBeforeMove.getPosition(BLACK_SHOE), state3.getPosition(BLACK_SHOE));
     }
 
     @Test
     void move_left_state3() {
         var stateBeforeMove = state3.clone();
         state3.move(Direction.LEFT);
-        assertEquals(stateBeforeMove.getPosition(0).moveLeft(), state3.getPosition(0));
-        assertEquals(stateBeforeMove.getPosition(1), state3.getPosition(1));
-        assertEquals(stateBeforeMove.getPosition(2).moveLeft(), state3.getPosition(2));
-        assertEquals(stateBeforeMove.getPosition(3), state3.getPosition(3));
+        assertEquals(stateBeforeMove.getPosition(BLOCK).moveLeft(), state3.getPosition(BLOCK));
+        assertEquals(stateBeforeMove.getPosition(RED_SHOE), state3.getPosition(RED_SHOE));
+        assertEquals(stateBeforeMove.getPosition(BLUE_SHOE).moveLeft(), state3.getPosition(BLUE_SHOE));
+        assertEquals(stateBeforeMove.getPosition(BLACK_SHOE), state3.getPosition(BLACK_SHOE));
     }
 
     @Test
