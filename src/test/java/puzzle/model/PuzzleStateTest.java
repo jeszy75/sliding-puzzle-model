@@ -94,62 +94,62 @@ class PuzzleStateTest {
 
     @Test
     void move_right_state1() {
-        var copy = state1.clone();
+        var stateBeforeMove = state1.clone();
         state1.move(Direction.RIGHT);
-        assertEquals(copy.getPosition(0).moveRight(), state1.getPosition(0));
-        assertEquals(copy.getPosition(1), state1.getPosition(1));
-        assertEquals(copy.getPosition(2), state1.getPosition(2));
-        assertEquals(copy.getPosition(3), state1.getPosition(3));
+        assertEquals(stateBeforeMove.getPosition(0).moveRight(), state1.getPosition(0));
+        assertEquals(stateBeforeMove.getPosition(1), state1.getPosition(1));
+        assertEquals(stateBeforeMove.getPosition(2), state1.getPosition(2));
+        assertEquals(stateBeforeMove.getPosition(3), state1.getPosition(3));
     }
 
     @Test
     void move_down_state1() {
-        var copy = state1.clone();
+        var stateBeforeMove = state1.clone();
         state1.move(Direction.DOWN);
-        assertEquals(copy.getPosition(0).moveDown(), state1.getPosition(0));
-        assertEquals(copy.getPosition(1), state1.getPosition(1));
-        assertEquals(copy.getPosition(2), state1.getPosition(2));
-        assertEquals(copy.getPosition(3), state1.getPosition(3));
+        assertEquals(stateBeforeMove.getPosition(0).moveDown(), state1.getPosition(0));
+        assertEquals(stateBeforeMove.getPosition(1), state1.getPosition(1));
+        assertEquals(stateBeforeMove.getPosition(2), state1.getPosition(2));
+        assertEquals(stateBeforeMove.getPosition(3), state1.getPosition(3));
     }
 
     @Test
     void move_up_state3() {
-        var copy = state3.clone();
+        var stateBeforeMove = state3.clone();
         state3.move(Direction.UP);
-        assertEquals(copy.getPosition(0).moveUp(), state3.getPosition(0));
-        assertEquals(copy.getPosition(1), state3.getPosition(1));
-        assertEquals(copy.getPosition(2), state3.getPosition(2));
-        assertEquals(copy.getPosition(3), state3.getPosition(3));
+        assertEquals(stateBeforeMove.getPosition(0).moveUp(), state3.getPosition(0));
+        assertEquals(stateBeforeMove.getPosition(1), state3.getPosition(1));
+        assertEquals(stateBeforeMove.getPosition(2), state3.getPosition(2));
+        assertEquals(stateBeforeMove.getPosition(3), state3.getPosition(3));
     }
 
     @Test
     void move_right_state3() {
-        var copy = state3.clone();
+        var stateBeforeMove = state3.clone();
         state3.move(Direction.RIGHT);
-        assertEquals(copy.getPosition(0).moveRight(), state3.getPosition(0));
-        assertEquals(copy.getPosition(1), state3.getPosition(1));
-        assertEquals(copy.getPosition(2).moveRight(), state3.getPosition(2));
-        assertEquals(copy.getPosition(3), state3.getPosition(3));
+        assertEquals(stateBeforeMove.getPosition(0).moveRight(), state3.getPosition(0));
+        assertEquals(stateBeforeMove.getPosition(1), state3.getPosition(1));
+        assertEquals(stateBeforeMove.getPosition(2).moveRight(), state3.getPosition(2));
+        assertEquals(stateBeforeMove.getPosition(3), state3.getPosition(3));
     }
 
     @Test
     void move_down_state3() {
-        var copy = state3.clone();
+        var stateBeforeMove = state3.clone();
         state3.move(Direction.DOWN);
-        assertEquals(copy.getPosition(0).moveDown(), state3.getPosition(0));
-        assertEquals(copy.getPosition(1), state3.getPosition(1));
-        assertEquals(copy.getPosition(2).moveDown(), state3.getPosition(2));
-        assertEquals(copy.getPosition(3), state3.getPosition(3));
+        assertEquals(stateBeforeMove.getPosition(0).moveDown(), state3.getPosition(0));
+        assertEquals(stateBeforeMove.getPosition(1), state3.getPosition(1));
+        assertEquals(stateBeforeMove.getPosition(2).moveDown(), state3.getPosition(2));
+        assertEquals(stateBeforeMove.getPosition(3), state3.getPosition(3));
     }
 
     @Test
     void move_left_state3() {
-        var copy = state3.clone();
+        var stateBeforeMove = state3.clone();
         state3.move(Direction.LEFT);
-        assertEquals(copy.getPosition(0).moveLeft(), state3.getPosition(0));
-        assertEquals(copy.getPosition(1), state3.getPosition(1));
-        assertEquals(copy.getPosition(2).moveLeft(), state3.getPosition(2));
-        assertEquals(copy.getPosition(3), state3.getPosition(3));
+        assertEquals(stateBeforeMove.getPosition(0).moveLeft(), state3.getPosition(0));
+        assertEquals(stateBeforeMove.getPosition(1), state3.getPosition(1));
+        assertEquals(stateBeforeMove.getPosition(2).moveLeft(), state3.getPosition(2));
+        assertEquals(stateBeforeMove.getPosition(3), state3.getPosition(3));
     }
 
     @Test
